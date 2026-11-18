@@ -1,5 +1,5 @@
-import { describe, it, expect } from 'vitest';
-import { countByStatus, completionRate } from './tasks';
+import { describe, it, expect } from "vitest";
+import { countByStatus, completionRate } from "./tasks";
 
 /**
  * Tests des fonctions utilitaires (tasks.ts)
@@ -24,14 +24,10 @@ import { countByStatus, completionRate } from './tasks';
 // PARTIE 1 : TESTS EXEMPLES (lisez-les !)
 // =============================================================================
 
-describe('countByStatus', () => {
-  it('compte les tâches de chaque statut', () => {
+describe("countByStatus", () => {
+  it("compte les tâches de chaque statut", () => {
     // ARRANGE : préparer une liste de tâches
-    const tasks = [
-      { status: 'todo' },
-      { status: 'todo' },
-      { status: 'done' },
-    ];
+    const tasks = [{ status: "todo" }, { status: "todo" }, { status: "done" }];
 
     // ACT : appeler la fonction à tester
     const counts = countByStatus(tasks);
@@ -40,7 +36,7 @@ describe('countByStatus', () => {
     expect(counts).toEqual({ todo: 2, in_progress: 0, done: 1 });
   });
 
-  it('renvoie des zéros pour une liste vide', () => {
+  it("renvoie des zéros pour une liste vide", () => {
     const counts = countByStatus([]);
 
     expect(counts).toEqual({ todo: 0, in_progress: 0, done: 0 });
@@ -57,25 +53,57 @@ describe('countByStatus', () => {
 //
 // Lancer les tests : npm test
 
-describe('completionRate', () => {
-  it('calcule le pourcentage de tâches terminées', () => {
+describe("completionRate", () => {
+  it("calcule le pourcentage de tâches terminées", () => {
     // ARRANGE : 4 tâches, dont 2 avec le statut 'done'
     // ACT     : appeler completionRate(tasks)
     // ASSERT  : le résultat doit valoir 50
-    throw new Error('Test à écrire (TP 1 - Exercice 4)');
+    // throw new Error('Test à écrire (TP 1 - Exercice 4)');
+
+    // ARRANGE
+    const tasks = [
+      { status: "todo" },
+      { status: "todo" },
+      { status: "done" },
+      { status: "done" },
+    ];
+
+    // ACT
+    const count = completionRate(tasks);
+
+    // ASSERT
+    expect(count).toBe(50);
   });
 
-  it('renvoie 100 quand toutes les tâches sont terminées', () => {
+  it("renvoie 100 quand toutes les tâches sont terminées", () => {
     // ARRANGE : 2 tâches, toutes les deux 'done'
     // ACT     : appeler completionRate(tasks)
     // ASSERT  : le résultat doit valoir 100
-    throw new Error('Test à écrire (TP 1 - Exercice 4)');
+    // throw new Error("Test à écrire (TP 1 - Exercice 4)");
+
+    // ARRANGE
+    const tasks = [{ status: "done" }, { status: "done" }];
+
+    // ACT
+    const count = completionRate(tasks);
+
+    // ASSERT
+    expect(count).toBe(100);
   });
 
-  it('renvoie 0 pour une liste vide', () => {
+  it("renvoie 0 pour une liste vide", () => {
     // ARRANGE : une liste vide []
     // ACT     : appeler completionRate([])
     // ASSERT  : le résultat doit valoir 0
-    throw new Error('Test à écrire (TP 1 - Exercice 4)');
+    // throw new Error("Test à écrire (TP 1 - Exercice 4)");
+
+    // ARRANGE
+    const tasks = [];
+
+    // ACT
+    const count = completionRate(tasks);
+
+    // ASSERT
+    expect(count).toBe(0);
   });
 });
