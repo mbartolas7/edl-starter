@@ -183,7 +183,7 @@ Pour les exercices 1 et 2, on suit la logique du **TDD** (*Test-Driven Developme
 1. 🔴 **Écrire le test** : il échoue, car la fonction n'est pas encore écrite.
 2. 🟢 **Écrire le code** de la fonction, jusqu'à ce que le test passe.
 
-### ✍️ Exercice 1 : Supprimer une Tâche (20 min)
+### ✍️ Exercice 1 : Supprimer une Tâche
 
 **Étape 1 : écrire les tests.** Dans la partie 2 de `test_api.py`, écrivez `test_delete_task` et `test_delete_nonexistent_task`. Ils doivent vérifier :
 
@@ -204,7 +204,7 @@ Les deux tests doivent être **rouges** : `delete_task()` renvoie encore une err
 
 ---
 
-### ✍️ Exercice 2 : Modifier une Tâche (35 min)
+### ✍️ Exercice 2 : Modifier une Tâche
 
 **Étape 1 : écrire les tests.** Dans la partie 2, écrivez `test_update_task_title`, `test_update_only_changes_sent_fields` et `test_update_nonexistent_task` :
 
@@ -230,7 +230,7 @@ Vos trois tests doivent passer. `test_update_task_with_invalid_priority` reste r
 
 ---
 
-### ✍️ Exercice 3 : Tester le Code Existant (30 min)
+### ✍️ Exercice 3 : Tester le Code Existant
 
 **🎯 Objectif :** écrire les 4 tests de la partie 3. Ici, le code existe déjà : vos tests vérifient qu'il se comporte correctement, notamment dans les cas d'erreur.
 
@@ -401,7 +401,7 @@ C'est le même pattern **Arrange-Act-Assert** qu'en Python. Seule la syntaxe cha
 
 ---
 
-### ✍️ Exercice 4 : Tester `completionRate()` (15 min)
+### ✍️ Exercice 4 : Tester `completionRate()`
 
 **🎯 Objectif :** Écrire les 3 tests de `completionRate()` dans `frontend/src/utils/tasks.test.js`.
 

@@ -35,7 +35,7 @@ cd edl-starter
 
 ## 📖 Suivre les Travaux Pratiques
 
-### TP 1 : Tests Unitaires (3h)
+### TP 1 : Tests Unitaires
 
 **Objectif :** Apprendre à écrire des tests unitaires backend et frontend
 
@@ -64,7 +64,7 @@ npm run dev
 
 ---
 
-### TP 2 : CI/CD avec GitHub Actions (3h)
+### TP 2 : CI/CD avec GitHub Actions
 
 **Objectif :** Automatiser les tests avec GitHub Actions
 
@@ -78,7 +78,7 @@ npm run dev
 
 ---
 
-### TP 3 : Déploiement + Database (3h)
+### TP 3 : Déploiement + Database
 
 **Objectif :** Déployer l'application en production avec PostgreSQL
 

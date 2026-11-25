@@ -1,6 +1,6 @@
 # Exercices Java - Version Starter
 
-## Exercice I : Calculs Géométriques (30 min)
+## Exercice I : Calculs Géométriques
 
 **Dossier :** `calculs-geo/`
 
@@ -15,7 +15,7 @@ cd calculs-geo
 make test
 ```
 
-## Exercice II : Money (20 min)
+## Exercice II : Money
 
 **Dossier :** `money/`
 
