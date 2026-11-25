@@ -1,0 +1,36 @@
+name: Frontend Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  frontend:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v7
+
+      # TODO : Setup Node.js 24 avec cache npm
+      # Indice : cache-dependency-path: frontend/package-lock.json
+      - name: Setup Node.js 24
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: "npm"
+          cache-dependency-path: frontend/package-lock.json
+
+      # TODO : Installez les dépendances (cd frontend && npm ci)
+      - name: Install dependencies
+        run: cd frontend && npm ci
+
+      # TODO : Lancez les tests
+      - name: Run tests
+        run: cd frontend && npm test -- --run
+
+      # TODO : Vérifiez le build
+      - name: Check build
+        run: cd frontend && npm run build
